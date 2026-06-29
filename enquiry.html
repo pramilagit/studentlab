@@ -1,29 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Enquiry</title>
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+        }
+        .container{
+            width:400px;
+            margin:80px auto;
+            background:white;
+            padding:20px;
+            border-radius:8px;
+            box-shadow:0 0 10px gray;
+        }
+        h2{
+            text-align:center;
+            color:#2c3e50;
+        }
+        input{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+        }
+        input[type="submit"]{
+            background:#007BFF;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+        input[type="submit"]:hover{
+            background:#0056b3;
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Welcome to IPST</h1>
-    <h2>Student Enquiry Form</h2>
+<div class="container">
 
-    <form action="#" method="post">
-        <label>Student Name:</label><br>
-        <input type="text" name="username" placeholder="Enter your name" required><br><br>
+<h2>Student Enquiry Form</h2>
 
-        <label>Batch:</label><br>
-        <input type="text" name="batch" placeholder="Enter your batch" required><br><br>
+<form action="thankyou.html">
 
-        <input type="submit" value="Submit">
-    </form>
+<label>Name</label>
+<input type="text" name="username" required>
 
-    <br>
+<label>Batch</label>
+<input type="text" name="batch" required>
 
-    <a href="index.html">Back to Home</a>
+<input type="submit" value="Submit">
+
+</form>
+
+</div>
 
 </body>
 </html>
