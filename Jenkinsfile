@@ -3,17 +3,22 @@ pipeline {
 
     stages {
 
-        stage('Checkout Complete') {
+        stage('Checkout') {
             steps {
-                echo 'Repository downloaded successfully.'
+                echo 'Source downloaded'
             }
         }
 
-        stage('Verify Files') {
+        stage('Verify') {
+            steps {
+                sh 'ls -la'
+            }
+        }
+
+        stage('Deploy') {
             steps {
                 sh '''
-                pwd
-                ls -la
+                scp -r * root@<Docker-Host-IP>:/var/lib/docker/volumes/apachevol/_data/
                 '''
             }
         }
