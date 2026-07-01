@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                scp -r * root@<Docker-Host-IP>:/var/lib/docker/volumes/apachevol/_data/
+                scp -r * root@172.16.36.131:/var/lib/docker/volumes/apachevol/_data/
                 '''
             }
         }
